@@ -15,7 +15,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&family=Story+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <h3>Clinic of Midway</h3>
+        <h2>Student Details</h2>
+        <form>
+            <div class="Full Name mb-3">
+                <label class="form-label" for="inputFullName">Full Name</label>
+                <input type="text" class="form-control w-75" id="inputFullName" placeholder="Full Name Here">
+            </div>
+            <div class="Quantity mb-3">
+                <h2>Ticket Selection</h2>
+                <label class="number" class="right-lable">Quantity (₱250.00 each)</label>
+                <input type="number" class="form-control w-75" placeholder="0" value="O" min="0" id="quty">
+            </div>
+            <div class="container">
+                <h2>Payment Details</h2>
+                <hr>
+                <label>Subtotal:</label>
+                <input type="number" readonly value="0.00" class="form-control w-20" id="suTotal"><br>
+                <label>Admin Fee:</label>
+                <input type="number" readonly value="50.00" class="form-control w-20"><br>
+
+                <label for="AreaNum">Total: &nbsp&nbsp&nbsp&nbsp</label><br>
+                <input type="number" id="tota" readonly class="form-control w-20" value="0.00"><br>
+
+                <button type="button" class="btn btn-dark" onclick="getTotal()">Total</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="button" class="btn btn-dark" onclick="window.location.reload()">Reset</button>
+            </div>
+        </form>
+    </div>
 </body>
     <script src="main.js"></script>
 </html>
